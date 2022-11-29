@@ -1,3 +1,12 @@
+--[[
+	made by " mefټ᲼᲼᲼᲼᲼᲼᲼᲼ ᲼᲼᲼᲼#5062 " id " 756943553120436314 "
+	
+	last updated 29 November 2022
+	open sourced + simple but working functions
+	
+]]--
+
+
 getgenv().IsEven = function(num)
     local input = num
     local new = math.floor(input)
