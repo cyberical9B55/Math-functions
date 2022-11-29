@@ -11,6 +11,9 @@ getgenv().IsEven = function(num)
     local input = num
     local new = math.floor(input)
     local diff = input-new
+    if diff ~= 0 then
+        return false
+    end
     input = input-diff
     new = input/2
     if math.ceil(new) ~= new then
@@ -26,6 +29,9 @@ getgenv().IsOdd = function(num)
     local input = num
     local new = math.floor(input)
     local diff = input-new
+    if diff ~= 0 then
+        return true
+    end
     input = input-diff
     new = input/2
     if math.ceil(new) ~= new then
