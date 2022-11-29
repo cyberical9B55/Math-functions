@@ -2,7 +2,8 @@
 Extra math functions for roblox (easy to learn+use)
 
 How to use: just add the loadstring at the top of your script!
-loadstring:loadstring(game:HttpGet("https://raw.githubusercontent.com/cyberical9B55/Math-functions/main/Functions"))()
+loadstring:
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/cyberical9B55/Math-functions/main/Functions"))()
 
 tutorial:
 
