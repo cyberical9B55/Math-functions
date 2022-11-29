@@ -31,7 +31,7 @@ getgenv().IsOdd = function(num)
     local new = math.floor(input)
     local diff = input-new
     if diff ~= 0 then
-        return true
+        return false
     end
     input = input-diff
     new = input/2
