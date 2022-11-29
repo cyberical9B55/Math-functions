@@ -1,0 +1,145 @@
+getgenv().IsEven = function(num)
+    local input = num
+    local new = math.floor(input)
+    local diff = input-new
+    input = input-diff
+    new = input/2
+    if math.ceil(new) ~= new then
+        return false
+    else
+        return true
+    end
+end
+getgenv().Even = getgenv().IsEven
+
+
+getgenv().IsOdd = function(num)
+    local input = num
+    local new = math.floor(input)
+    local diff = input-new
+    input = input-diff
+    new = input/2
+    if math.ceil(new) ~= new then
+        return true
+    else
+        return false
+    end
+end
+getgenv().Odd = getgenv().IsOdd
+
+
+getgenv().FormatNumber = function(num)
+	num = tostring(num)
+	toreturn = num:reverse():gsub("...","%0,",math.floor((#num-1)/3)):reverse()
+    if toreturn == nil then
+        return "Input was a string"
+    end
+    return toreturn
+end
+getgenv().Format = getgenv().FormatNumber
+
+
+getgenv().ToClosest = function(set, num)
+    local input = num
+    local tofind = 0
+    local oldclosest = math.huge
+    local closestset = set
+    for i = 1, input+1 do
+        local c = tofind*i
+        local d = input-c
+        if d < 0 then
+            d = d*-1
+        end
+        if d < oldclosest then
+            oldclosest = d
+            closestset = c
+        end
+    end
+    return closestset
+end
+
+
+getgenv().FindEvensFromTable = function(tab)
+    local newtab = {}
+    local tab = tab
+    for i,v in pairs(tab) do
+        if typeof(v) == "number" then
+            local c =getgenv().IsEven(v)
+            if c == true then
+                table.insert(newtab, v)
+            end
+        end
+    end
+    return newtab
+end
+getgenv().FindEvens = getgenv().FindEvensFromTable
+
+
+getgenv().RemoveEvensFromTable = function(tab)
+    local tab = tab
+    for i,v in pairs(tab) do
+        if typeof(v) == "number" then
+            local c =getgenv().IsEven(v)
+            if c == true then
+                table.remove(tab, i)
+            end
+        end
+    end
+    return tab
+end
+getgenv().RemoveEvens = getgenv().RemoveEvensFromTable
+
+
+getgenv().FindOddsFromTable = function(tab)
+    local newtab = {}
+    local tab = tab
+    for i,v in pairs(tab) do
+        if typeof(v) == "number" then
+            local c =getgenv().IsOdd(v)
+            if c == true then
+                table.insert(newtab, v)
+            end
+        end
+    end
+    return newtab
+end
+getgenv().FindOdds = getgenv().FindOddsFromTable
+
+
+getgenv().RemoveOddsFromTable = function(tab)
+    local tab = tab
+    for i,v in pairs(tab) do
+        if typeof(v) == "number" then
+            local c =getgenv().IsOdd(v)
+            if c == true then
+                table.remove(tab, i)
+            end
+        end
+    end
+    return tab
+end
+getgenv().RemoveOdds = getgenv().RemoveOddsFromTable
+
+
+getgenv().IsClosestTo = function(tab, num)
+    local input = num
+    local tab = tab
+    local closest = nil
+    local oldclosest = math.huge
+    local g = {}
+    for i,v in pairs(tab) do
+        local diff = input-v
+        if diff <0 then
+            diff = diff*-1
+        end
+        table.insert(g, diff)
+    end
+    for i = 1, #g do
+        local c = g[i]
+        if c < oldclosest then
+            oldclosest = c
+            closest = tab[i]
+        end
+    end
+    return closest
+end
