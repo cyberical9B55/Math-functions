@@ -17,6 +17,14 @@ IsOdd/Odd:
   return true/false depending on if the number you input is odd or not
   example:
     print(IsOdd(5)) -- this would return true
+
+
+IsPrime/Prime:
+  return true/false depending on if the number is prime of not
+  example:
+    print(IsPrime(7)) -- would return true since 7 is prime
+    
+    
     
 FormatNumber/Format:
   returns a nicely formatted number that you input
