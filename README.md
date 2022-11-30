@@ -23,7 +23,7 @@ FormatNumber/Format:
   example:
     print(FormatNumber(100000)) -- this would return "100,000)
     
-ToClosest:
+ToClosest/RoundIn:
   returns a number set your input number is closest to
   example:
     local set = 100 -- can be anything im just using 100s for example
@@ -31,7 +31,7 @@ ToClosest:
     print(ToClosest(set, num)) -- would return 100 as 100 is the closest set of 100 to 69
     
     local num = 690 -- haha funny but can be any number
-    print(ToClosest(set, num)) -- would return 100 as 100 is the closest set of 700 to 690
+    print(ToClosest(set, num)) -- would return 690 as 690 is the closest 100 of 700 to 690
     
     
 FindEvensFromTable/FindEvens:
