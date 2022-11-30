@@ -37,14 +37,14 @@ ToClosest/RoundIn:
 FindEvensFromTable/FindEvens:
   returns a table with all the even numbers from a past table
   example:
-    local mytab = {1, 2, 3, 4, 5, 6, 7, 8)
+    local mytab = {1, 2, 3, 4, 5, 6, 7, 8}
     print(FindEvensFromTable(mytab)) -- would return 2,4,6,8
     
     
 RemoveEvensFromTable/RemoveEvens:
   returns a table with no even numbers from a past table
   example:
-    local mytab = {1, 2, 3, 4, 5, 6, 7, 8)
+    local mytab = {1, 2, 3, 4, 5, 6, 7, 8}
     print(RemoveEvensFromTable(mytab)) -- would return 1, 3, 5, 7
     
     
@@ -53,14 +53,14 @@ RemoveEvensFromTable/RemoveEvens:
 FindOddsFromTable/FindOdds:
   returns a table with all the Odd numbers from a past table
   example:
-    local mytab = {1, 2, 3, 4, 5, 6, 7, 8)
+    local mytab = {1, 2, 3, 4, 5, 6, 7, 8}
     print(FindOddsFromTable(mytab)) -- would return 1, 3, 5, 7
     
     
 RemoveOddsFromTable/RemoveOdds:
   returns a table with no Odd numbers from a past table
   example:
-    local mytab = {1, 2, 3, 4, 5, 6, 7, 8)
+    local mytab = {1, 2, 3, 4, 5, 6, 7, 8}
     print(RemoveOddsFromTable(mytab)) -- would return 2, 4, 6, 8
     
     
